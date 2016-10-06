@@ -36,7 +36,7 @@ let reverse_words = function(sentence) {
 			break;
 		}
 		end = start + 1;
-		while (end < sentence.length && sentence[end] != ' ') {
+		while (end < sentence.length && sentence[end] !== ' ') {
 			end++;
 		}
 		sentence = str_rev(sentence, start, end - 1);
