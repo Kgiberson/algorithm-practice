@@ -41,3 +41,9 @@ LinkedList.prototype.remove = function(val){
 		}
 	}
 }
+
+
+// Whiteboarding Wednesday problems:
+// 1) Implement indexing functionality for a linked list
+// 2) Given two indexes, perform a swap of 2 nodes in a linked list
+// 3) Check if the linked list is circular (rabbit and turtle)
