@@ -18,3 +18,13 @@ HashTable.prototype.add = function(key, value) {
 HashTable.prototype.length = function() {
 	return this.numberOfValues;
 }
+
+HashTable.prototype.print = function() {
+	var string = '';
+	for (var value in this.values) {
+		for (var key in this.values[value]) {
+			string += this.values[value][key] + ' ';
+		}
+	}
+	console.log(string.trim());
+}
