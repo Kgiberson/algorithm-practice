@@ -15,9 +15,31 @@ HashTable.prototype.add = function(key, value) {
 	this.values[hash][key] = value;
 };
 
+HashTable.prototype.remove = function(key) {
+	var hash = this.calculateHash(key);
+	if (this.values.hasOwnProperty(hash) && this.values[hash].hasOwnProperty(key)) {
+			delete this.values[hash][key];
+			this.numberOfValues--;
+	}
+};
+
+HashTable.prototype.calculateHash = function(key) {
+	return key.toString().length % this.size;
+}
+
+HashTable.prototype.search = function(key) {
+	var hash = this.calculateHash(key);
+	if (this.values.hasOwnProperty(hash) && this.values[hash].hasOwnProperty(key)) {
+		return this.values[hash][key];
+	} else {
+		return null;
+	}
+}
+
 HashTable.prototype.length = function() {
 	return this.numberOfValues;
 }
+
 
 HashTable.prototype.print = function() {
 	var string = '';
