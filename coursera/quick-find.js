@@ -23,3 +23,5 @@ QuickFind.prototype.union = function(p, q) {
 QuickFind.prototype.connected = function(p, q) {
 	return this._ids[p] === this._ids[q];
 }
+
+// Why is the O(n^2) and not O(n)?
