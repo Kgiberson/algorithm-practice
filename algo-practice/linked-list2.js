@@ -12,3 +12,17 @@ function LinkedList() {
 	this.length = 0;
 };
 
+LinkedList.prototype.prettyPrint = function() {
+	const cur = this.head;
+	let result = "";
+
+	while (cur !== null) {
+		if (cur.next === null) {
+			result += cur.data;
+		} else {
+			result += cur.data + ", ";
+		}
+		cur = cur.next;
+	}
+	console.log(result);
+};
