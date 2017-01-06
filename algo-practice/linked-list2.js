@@ -41,3 +41,12 @@ LinkedList.prototype.append = function(data) {
 	this.length += 1;
 };
 
+LinkedList.prototype.prepend = function(data) {
+	if (this.head.data == null) {
+		this.head = new Node(data, null);
+	} else {
+		let node = new Node(data, this.head);
+		this.head = node;
+	}
+	this.length += 1;
+};
