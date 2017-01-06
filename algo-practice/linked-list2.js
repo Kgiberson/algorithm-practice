@@ -26,3 +26,18 @@ LinkedList.prototype.prettyPrint = function() {
 	}
 	console.log(result);
 };
+
+LinkedList.prototype.append = function(data) {
+	if(this.head.data == null) {
+		this.head = new Node(data, null);
+	} else {
+		let cur = this.head;
+		while(cur.next != null) {
+			cur = cur.next;
+		}
+		const node = new Node(data, null);
+		cur.next = node;
+	}
+	this.length += 1;
+};
+
