@@ -50,3 +50,7 @@ LinkedList.prototype.prepend = function(data) {
 	}
 	this.length += 1;
 };
+
+LinkedList.prototype.getHead = function(data) {
+	return this.head;
+};
