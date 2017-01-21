@@ -9,3 +9,9 @@ var countBits = function(n) {
   };
   return oneBitCount;
 };
+
+// Refactored Solution
+
+var countBits = function(n) {
+  return n.toString(2).split('0').join('').length;
+}
