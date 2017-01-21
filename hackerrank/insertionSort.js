@@ -49,12 +49,15 @@ let insertionSort = arr => {
     for (let i = 1; i < arr.length; i++) {
         let key = arr[i];
         let j = i - 1;
+        let shifts = 0
         while (j >= 0 && arr[j] > key) {
             arr[j+1] = arr[j];
             j--;
+            shifts++;
         }
         arr[j+1] = key;
-        printArray(arr)
+        // printArray(arr)
+        return arr;
     }
 }
 
